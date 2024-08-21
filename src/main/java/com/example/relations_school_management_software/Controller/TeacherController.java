@@ -37,7 +37,7 @@ public class TeacherController {
     }
 
     @GetMapping("/teacher-details/{teacherId}")
-    public ResponseEntity<Teacher> getTeacherDetails(@PathVariable Integer teacherId) {
+    public ResponseEntity getTeacherDetails(@PathVariable Integer teacherId) {
         return ResponseEntity.status(200).body(teacherService.getTeacherDetails(teacherId));
     }
 
